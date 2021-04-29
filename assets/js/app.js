@@ -8,7 +8,7 @@ var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
 // Create an SVG wrapper,
-// Append an SVG group that will hold our chart,
+// Append an SVG group that will hold chart,
 var svg = d3.select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
@@ -89,7 +89,7 @@ d3.csv("/assets/data/data.csv").then(function(stateData) {
 // tooltip in the chart
     chartGroup.call(toolTip);   
     
-// Add an onmouseover event to display a tooltip   
+// Add  onmouseover event to display a tooltip   
     circlesGroup.on("mouseover", function(data) {
         toolTip.show(data, this);
     })
@@ -99,7 +99,7 @@ d3.csv("/assets/data/data.csv").then(function(stateData) {
         toolTip.hide(data);
     });
 
-    // Create axes labels  
+    // Create  labels / attr 
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left - 5)
